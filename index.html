@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Your Document Title</title>
 </head>
 <body>
@@ -16,7 +18,7 @@
         <nav class="header-nav">
             <button class="nav-button">About us</button>
             <button class="nav-button">Article</button>
-            <button class="nav-button dropdown-button">Property</button>
+            <button class="nav-button dropdown-button">Property &#9660;</button>
             <button class="nav-button sign-up-button">Sign up</button>
         </nav>
     </header>
@@ -31,16 +33,14 @@
             </div>
             <div class="search-container">
                 <div class="input-container">
-                    <input type="text" class="input">
-                    <div class="input-addon">
-                        <img class="input-icon" src="./img/map.png" alt="Map Icon">
-                        <span class="input-addon-text">Search for the location you want!</span>
-                    </div>
+                    <img class="input-icon" src="./img/map.png" alt="Map Icon">
+                    <input type="text" class="input" placeholder="Search for the location you want!">
                 </div>
-                <button class="button">
-                    Search <img src="./img/arrow.png" alt="Search icon" class="button-image">
+                <button class="button search-button">
+                    Search <img src="./img/arrow.png" alt="Search icon" class="button-image button-image-search">
                 </button>
             </div>
+            
             
             <div class="partnership-section">
                 <h3 class="partnership-header">Our partnership</h3>
@@ -61,47 +61,61 @@
             </div>
         </section>
 
-        <aside class="facts-slider">
-            <div class="facts-slider-item">
-                <h3 class="facts-slider-header">1K+ People</h3>
-                <p class="facts-slider-subheader">Successfully Getting Home</p>
-                <img src="./img/Ellipse 4.png" alt="Fact's image" class="facts-slider-image image-group">
-                <img src="./img/Ellipse 5.png" alt="Fact's image" class="facts-slider-image image-group">
-                <img src="./img/Ellipse 6.png" alt="Fact's image" class="facts-slider-image image-group">
-            </div>
-            <div class="facts-slider-item">
-                <h3 class="facts-slider-header">56 Houses</h3>
-                <p class="facts-slider-subheader">Sold monthly</p>
-                <img src="./img/Rectangle 12.png" alt="Fact's image" class="facts-slider-image">
-            </div>
-        </aside>
+        <div class="aside-container">
+            <aside class="facts-slider">
+                <div class="facts-slider-item">
+                    <img src="./img/group.png" alt="Fact's image" class="facts-slider-image">
+
+                    <div class="facts-info">
+                        <h3 class="facts-slider-header">1K+ People</h3>
+                        <p class="facts-slider-subheader">Successfully Getting Home</p>
+                    </div>
+                    
+                </div>
+                <div class="facts-slider-item">
+                    <img src="./img/Rectangle 12.png" alt="Fact's image" class="facts-slider-image fact-img">
+                    <div class="facts-info">
+
+                        <h3 class="facts-slider-header">56 Houses</h3>
+                        <p class="facts-slider-subheader">Sold monthly</p>
+                    </div>  
+                </div>
+            </aside>
+        </div>
+        
 
         <section class="recommendation-section">
-            <div class="section-header-container">
-                <span class="section-start">
-                    <img src="./img/Rectangle 14.png" alt="Line" class="section-start-image"> Our Recommendation
-                </span>
-                <h2 class="section-header">Featured House</h2>
+            <div class="recommendation-upper">
+                <div class="section-header-container">
+                    <span class="section-start">
+                        Our Recommendation
+                    </span>
+                    <h2 class="section-header">Featured House</h2>
+                </div>
+                
+                <div class="recommendation-navigation">
+                    <button class="recommendation-button recommendation-button-green">
+                       <img src="./img/Vector.png" class="recommendation-icon"/>
+                       House
+                    </button>
+                    <button class="recommendation-button">
+                        <img src="./img/ic_round-villa.png" class="recommendation-icon"/>Villa
+                    </button>
+                    <button class="recommendation-button">
+                        <img src="./img/ic_round-apartment.png" class="recommendation-icon"/>Apartment
+                    </button>
+    
+                    <div class="page-buttons">
+                        <button class="page-button page-button-disabled">
+                            <img class="button-image" src="./img/eva_arrow-ios-forward-fill.png" alt="Previous item icon">
+                        </button>
+                        <button class="page-button">
+                            <img class="button-image" src="./img/eva_arrow-ios-forward-fill(1).png" alt="Next item icon">
+                        </button>
+                    </div>
+                </div>
             </div>
             
-            <div class="recommendation-navigation">
-                <button class="recommendation-button">
-                   <img src="./img/Vector.png" class="recommendation-icon"/>House
-                </button>
-                <button class="recommendation-button">
-                    <img src="./img/ic_round-villa.png" class="recommendation-icon"/>Villa
-                </button>
-                <button class="recommendation-button">
-                    <img src="./img/ic_round-apartment.png" class="recommendation-icon"/>Apartment
-                </button>
-
-                <button class="button">
-                    <img class="button-image disabled" src="./img/eva_arrow-ios-forward-fill.png" alt="Previous item icon">
-                </button>
-                <button class="button">
-                    <img class="button-image" src="./img/eva_arrow-ios-forward-fill(1).png" alt="Next item icon">
-                </button>
-            </div>
             <div class="recommendation-slider">
                 <div class="recommendation-item">
                     <img src="./img/Img.png" alt="Recommendation image" class="recommendation-image">
@@ -109,8 +123,11 @@
                     <p class="recommendation-price">$ 35.000.000</p>
                     <div class="person">
                         <img src="./img/owner_1.png" alt="person's image" class="person-image">
-                        <h5 class="person-name">Dianne Russell</h5>
-                        <p class="person-city">Manchester, Kentucky</p>
+                        <div class="person-info">
+                            <h5 class="person-name">Dianne Russell</h5>
+                            <p class="person-city">Manchester, Kentucky</p>
+                        </div>
+                       
                     </div>
                 </div>
                 <div class="recommendation-item">
@@ -119,8 +136,11 @@
                     <p class="recommendation-price">$ 20.000.000</p>
                     <div class="person">
                         <img src="./img/owner_2.png" alt="person's image" class="person-image">
-                        <h5 class="person-name">Robert Fox</h5>
-                        <p class="person-city">Dr. San Jose, South Dakota</p>
+                        <div class="person-info">
+                            <h5 class="person-name">Robert Fox</h5>
+                            <p class="person-city">Dr. San Jose, South Dakota</p>
+                        </div>
+                        
                     </div>
                 </div>
                 <div class="recommendation-item">
@@ -129,54 +149,65 @@
                     <p class="recommendation-price">$ 44.000.000</p>
                     <div class="person">
                         <img src="./img/owner_3.png" alt="person's image" class="person-image">
-                        <h5 class="person-name">Ronald Richards</h5>
-                        <p class="person-city">Santa Ana, Illinois</p>
+                        <div class="person-info">
+                            <h5 class="person-name">Ronald Richards</h5>
+                            <p class="person-city">Santa Ana, Illinois</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="ready-to-sell">
-            <div class="section-header-container">
-                <span class="section-start">
-                    <img src="./img/Rectangle 14.png" alt="Line" class="section-start-image"> Our Recommendation
-                </span>
-                <h2 class="section-header">Let’s tour and see our house!</h2>
-                <p class="ready-to-sell-subheader">
-                    Houses recommended by our partners that have been curated to become the home of your dreams!
-                </p>
+            <div class="ready-to-sell-main">
+                <div class="section-header-container">
+                    <span class="section-start">
+                         Ready To Sell
+                    </span>
+                    <h2 class="section-header">Let’s tour and see our house!</h2>
+                    <p class="ready-to-sell-subheader">
+                        Houses recommended by our partners that have been curated to become the home of your dreams!
+                    </p>
+                </div>
+                
+                <article class="house-details">
+                    <h4 class="house-details-header">House Detail</h4>
+                    <div class="house-details-facts">
+                        <span class="house-details-item">
+                            <img class="house-details-image" src="./img/bed 1.png" alt="bed">
+                            <p class="house-details-text">4 Bedrooms</p>
+                        </span>
+                        <span class="house-details-item">
+                            <img class="house-details-image" src="./img/bath 1.png" alt="bath">
+                            <p class="house-details-text">2 Bathrooms</p>
+                        </span>
+                        <span class="house-details-item">
+                            <img class="house-details-image" src="./img/car-garage 1.png" alt="car-garage">
+                            <p class="house-details-text">1 Carport</p>
+                        </span>
+                        <span class="house-details-item">
+                            <img class="house-details-image" src="./img/stairs-with-handrail 1.png" alt="stairs-with-handrail">
+                            <p class="house-details-text">2 Floors</p>
+                        </span>
+                    </div>
+                    
+                    <div class="house-details-contact">
+                        <div class="person contact-person">
+                            <img src="./img/owner_1.png" alt="person's image" class="person-image">
+
+                            <div class="person-info">
+                                <h5 class="person-name">Dianne Russell</h5>
+                                <p class="person-position">Manager Director</p>
+                            </div>
+                        </div>
+                        <button class="button contact-button">
+                            <img class="button-image" src="./img/fluent_call-20-filled.png" alt="contact image">
+                            Contact Now
+                        </button>
+                    </div>
+                </article>
             </div>
             
-            <article class="house-details">
-                <h4 class="house-details-header">House Detail</h4>
-                <span class="house-details-item">
-                    <img class="house-details-image" src="./img/bed 1.png" alt="bed">
-                    <p class="house-details-text">4 Bedrooms</p>
-                </span>
-                <span class="house-details-item">
-                    <img class="house-details-image" src="./img/bath 1.png" alt="bath">
-                    <p class="house-details-text">2 Bathrooms</p>
-                </span>
-                <span class="house-details-item">
-                    <img class="house-details-image" src="./img/car-garage 1.png" alt="car-garage">
-                    <p class="house-details-text">1 Carport</p>
-                </span>
-                <span class="house-details-item">
-                    <img class="house-details-image" src="./img/stairs-with-handrail 1.png" alt="stairs-with-handrail">
-                    <p class="house-details-text">2 Floors</p>
-                </span>
-                <div class="house-details-contact">
-                    <div class="person contact-person">
-                        <img src="./img/owner_1.png" alt="person's image" class="person-image">
-                        <h5 class="person-name">Dianne Russell</h5>
-                        <p class="person-position">Manager Director</p>
-                    </div>
-                    <button class="button">
-                        <img class="button-image" src="./img/fluent_call-20-filled.png" alt="contact image">
-                        Contact Now
-                    </button>
-                </div>
-            </article>
 
             <aside class="ready-to-sell-visuals">
                 <video width="640" height="360" controls>
@@ -192,28 +223,33 @@
         </section>
 
         <section class="review">
-            <div class="section-header-container">
-                <span class="section-start section-start-centered">
-                    <img src="./img/Rectangle 14.png" alt="Line" class="section-start-image"> See Our Review
+            <div class="section-header-container review-header-container">
+                <span class="section-start section-start-centered">See Our Review
                 </span>
                 <h2 class="section-header">What Our User Say About Us</h2>
             </div>
             
             <div class="review-slider">
                 <article class="review-item">
-                    <img src="review-image" alt="Review's image">
+                    <img src="./img/Rectangle 21.png" alt="Review's image">
                     <div class="review-card">
                         <h2 class="review-header">Best! I got the house I wanted through Hounter</h2>
                         <p class="review-text">Through this website I can get a house with the type and specifications I want very easily, without a complicated process to be able to find information on the house we want.</p>
-                        <div class="person review-person">
-                            <img src="./img/owner_1.png" alt="person's image" class="person-image">
-                            <h5 class="person-name">Dianne Russell</h5>
-                            <p class="person-position">Manager Director</p>
+                        
+                        <div class="review-person-rating">
+                            <div class="person review-person">
+                                <img src="./img/owner_1.png" alt="person's image" class="person-image">
+                                <div class="person-info">
+                                    <h5 class="person-name">Dianne Russell</h5>
+                                    <p class="person-position">Manager Director</p>
+                                </div>
+                            </div>
+                            <span class="review-rating">
+                                <img src="./img/bx_bxs-star.png" alt="Star">
+                                4.6
+                            </span>
                         </div>
-                        <span class="review-rating">
-                            <img src="./img/bx_bxs-star.png" alt="Star">
-                            4.6
-                        </span>
+                        
                     </div>
                 </article>
                 <div class="pagination">
@@ -223,83 +259,102 @@
         </section>
 
         <section class="tips">
-            <div class="section-header-container">
+            <div class="section-header-container section-header-centered">
                 <span class="section-start section-start-centered">
-                    <img src="./img/Rectangle 14.png" alt="Line" class="section-start-image"> See tips and trick from our partnership
+                    See tips and trick from our partnership
                 </span>
                 <h2 class="section-header">Find out more about selling and buying homes</h2>
-                <button class="button">
+                <button class="button tips-button">
                     More Artikel
                 </button>
             </div>
             
-            <div class="tips-items">
-                <div class="tips-item">
-                    <img class="tip-image" src="./img/Rectangle 22.png" alt="House image">
-                    <div class="person tips-person">
-                        <img src="./img/owner_1.png" alt="person's image" class="person-image">
-                        <p class="person-name">Dianne Russell</p>
+            <div class="tips-main">
+                <div class="tips-items">
+                    <div class="tips-item">
+                        <img class="tip-image" src="./img/Rectangle 22.png" alt="House image">
+                        <div class="tips-item-info">
+                            <div class="person tips-person">
+                                <img src="./img/tips3.png" alt="person's image" class="person-image tips-person-image">
+                                <p class="person-name">Dianne Russell</p>
+                            </div>
+                            <h3 class="tips-item-header">The things we need to check when we want to buy a house</h3>
+                            <div class="tips-item-date">
+                                <img class="tips-item-image" src="./img/ic_round-access-time.png" alt="clock icon">
+                                4 min read | 25 Apr 2021
+                            </div>
+                        </div>
+ 
                     </div>
-                    <h3 class="tips-item-header">The things we need to check when we want to buy a house</h3>
-                    <div class="tips-item-date">
-                        <img class="tips-item-image" src="./img/ic_round-access-time.png" alt="clock icon">
-                        4 min read | 25 Apr 2021
+                    <div class="tips-item">
+                        <img class="tip-image" src="./img/Rectangle 22(1).png" alt="House image">
+                        <div class="tips-item-info">
+                            <div class="person tips-person">
+                                <img src="./img/tips2.png" alt="person's image" class="person-image tips-person-image">
+                                <p class="person-name">Courtney Henry</p>
+                            </div>
+                            <h3 class="tips-item-header">7 Ways to distinguish the quality of the house we want to buy</h3>
+                            <div class="tips-item-date">
+                                <img class="tips-item-image" src="./img/ic_round-access-time.png" alt="clock icon">
+                                6 min read | 24 Apr 2021
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tips-item">
+                        <img class="tip-image" src="./img/Rectangle 22(2).png" alt="House image">
+                        <div class="tips-item-info">
+                            <div class="person tips-person">
+                                <img src="./img/tips1.png" alt="person's image" class="person-image tips-person-image">
+                                <p class="person-name">Darlene Robertson</p>
+                            </div>
+                            <h3 class="tips-item-header">The best way to know the quality of the house we want to buy</h3>
+                            <div class="tips-item-date">
+                                <img class="tips-item-image" src="./img/ic_round-access-time.png" alt="clock icon">
+                                2 min read | 24 Apr 2021
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-                <div class="tips-item">
-                    <img class="tip-image" src="./img/Rectangle 22(1).png" alt="House image">
-                    <div class="person tips-person">
-                        <img src="./img/person.png" alt="person's image" class="person-image">
-                        <p class="person-name">Courtney Henry</p>
+    
+                <div class="tips-main-item">
+                    <img class="tip-image main-tip-image" src="./img/Rectangle 23.png" alt="House image">
+                    <div class="person tips-person-main">
+                        <img src="./img/tips4.png" alt="person's image" class="person-image">
+                        <p class="person-name">Cameron Williamson</p>
                     </div>
-                    <h3 class="tips-item-header">7 Ways to distinguish the quality of the house we want to buy</h3>
-                    <div class="tips-item-date">
-                        <img class="tips-item-image" src="./img/ic_round-access-time.png" alt="clock icon">
-                        6 min read | 24 Apr 2021
-                    </div>
-                </div>
-                <div class="tips-item">
-                    <img class="tip-image" src="./img/Rectangle 22(2).png" alt="House image">
-                    <div class="person tips-person">
-                        <img src="./img/person_1.png" alt="person's image" class="person-image">
-                        <p class="person-name">Darlene Robertson</p>
-                    </div>
-                    <h3 class="tips-item-header">The best way to know the quality of the house we want to buy</h3>
-                    <div class="tips-item-date">
+                    <h2 class="tips-item-header tips-item-header-main">12 Things to know before buying a house</h2>
+                    <Want class="tips-item-text">Want to buy a house but are unsure about what we should know, here I will try to explain what we should know and check when we want to buy a house</p>
+                    <div class="tips-item-date tips-item-date-main">
                         <img class="tips-item-image" src="./img/ic_round-access-time.png" alt="clock icon">
                         2 min read | 24 Apr 2021
                     </div>
                 </div>
             </div>
-
-            <div class="tips-main">
-                <img class="tip-image main-tip-image" src="./img/Rectangle 23.png" alt="House image">
-                <div class="person tips-person-main">
-                    <img src="./img/person_1.png" alt="person's image" class="person-image">
-                    <p class="person-name">Cameron Williamson</p>
-                </div>
-                <h2 class="tips-item-header tips-item-header-main">12 Things to know before buying a house</h2>
-                <p class="tips-item-text"></p>Want to buy a house but are unsure about what we should know, here I will try to explain what we should know and check when we want to buy a house</p>
-                <div class="tips-item-date tips-item-date-main">
-                    <img class="tips-item-image" src="./img/ic_round-access-time.png" alt="clock icon">
-                    2 min read | 24 Apr 2021
-                </div>
-            </div>
+            
         </section>
 
         <section class="subscribe">
 
             <img class="subscribe-bg" src="./img/Subscribe.png" alt="Background">
-            <div class="input-container">
-                <input type="text" class="input">
-                <div class="input-addon">
-                    <img class="input-icon" src="./img/eva_email-fill.png" alt="Mail Icon">
-                    <span class="input-addon-text">Your email here</span>
+
+            <div class="subscribe-form">
+                <h2 class="subscribe-header">Subscribe For More Info
+                    and update from Hounter</h2>
+            <div class="search-container subscribe-container">
+                
+                <div class="input-container">
+                    <img class="input-icon" src="./img/eva_email-fill.png" alt="Map Icon">
+                    <input type="text" class="input" placeholder="Search for the location you want!">
                 </div>
+                <button class="button search-button">
+                    Subscribe !
+                </button>
             </div>
-            <button class="button">
-                Subscribe now
-            </button>
+            </div>
+            
+            
         </section>
 
     </main>
